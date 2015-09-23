@@ -1,4 +1,4 @@
-cat <<EOF >> /etc/pacman.conf
+sudo cat <<EOF >> /etc/pacman.conf
 [archlinuxfr]
 SigLevel = Never
 Server = http://repo.archlinux.fr/$arch

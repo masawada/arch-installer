@@ -1,8 +1,8 @@
 # install graphic driver
-yaourt xf86-video-intel
+yaourt -S xf86-video-intel
 
 # install awesome
-yaourt xorg-server xorg-xinit xorg-utils xorg-server-utils xterm awesome
+yaourt -S xorg-server xorg-xinit xorg-utils xorg-server-utils xterm awesome
 
 # init scripts
 cp /etc/skel/.xinitrc $HOME/
@@ -10,7 +10,7 @@ echo "exec awesome" >> $HOME/.xinitrc
 mkdir -p $HOME/.config/awesome/
 cp /etc/xdg/awesome/rc.lua $HOME/.config/awesome/
 
-cat <<EOF > /etc/X11/xorg.conf.d/10-monitor.conf
+sudo cat <<EOF > /etc/X11/xorg.conf.d/10-monitor.conf
 Section "Monitor"
   Identifier "MainMonitor"
   Option "PreferredMode" "1280x800"
